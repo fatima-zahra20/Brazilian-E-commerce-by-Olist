@@ -55,7 +55,7 @@ SELECT
     COUNT(*) - COUNT(purchased_at)   AS purchased_at_nulls, -- 0
 	COUNT(*) - COUNT(approved_at)    AS approved_at_nulls, --160
 	COUNT(*) - COUNT(shipped_at)     AS shipped_at_nulls,  --1783
-	COUNT(*) - COUNT(delivered_at)   AS shipped_at_nulls,  --2965
+	COUNT(*) - COUNT(delivered_at)   AS delivered_at_nulls,  --2965
 	COUNT(*) - COUNT(estimated_delivery)     AS shipped_at_nulls  -- 0
 FROM orders;
 
