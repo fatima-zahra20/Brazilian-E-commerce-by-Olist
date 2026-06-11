@@ -212,7 +212,7 @@ FROM payments p
 INNER JOIN order_items o ON p.order_id = o.order_id
 WHERE p.payment_value = 0 -- 5 rows
 
-SELECT DISTINCT p.product_id , p.weight_g
+SELECT  DISTINCT p.product_id , p.weight_g
 FROM products p
 INNER JOIN order_items o ON p.product_id = o.product_id
 WHERE p.weight_g = 0 -- 4 rows 
