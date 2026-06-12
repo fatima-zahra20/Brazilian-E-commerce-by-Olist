@@ -241,7 +241,7 @@ HAVING c > 1
 SELECT order_id , COUNT(*) AS c 
 FROM order_items 
 GROUP BY order_id 
-HAVING c > 1
+HAVING c > 20
 -- Yes order_id is duped 
 
 SELECT product_id , COUNT(*) AS c 
@@ -268,4 +268,4 @@ HAVING c > 1
 -- different items in the same order can belong to different sellers
 -- this is the only table where money changes hands (price + freight_value)
 -- all revenue, product, and seller analysis starts from this table
--- maximum 20 items found in a single order
+-- maximum 21 items found in a single order
