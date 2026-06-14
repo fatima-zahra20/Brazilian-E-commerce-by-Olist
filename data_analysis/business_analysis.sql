@@ -255,7 +255,7 @@ LIMIT 5
 -- general pattern: top revenue sellers run clean operations
 -- exception: high revenue does not guarantee good operations (seller 2)
 -- low revenue outlier flagged earlier: 1.0 review score despite fast delivery
--- feeds Phase 6: seller leaderboard page directly
+
 
 
 
