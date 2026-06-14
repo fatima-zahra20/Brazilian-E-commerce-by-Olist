@@ -55,3 +55,40 @@ Late deliveries nearly halve review scores: on-time orders average **4.29 stars*
 
 
 
+
+## Analysis Phases
+ 
+The project followed a structured six-phase roadmap:
+ 
+**Phase 1 : Data familiarization**
+Row counts, schema inspection, grain checks, and referential integrity across all 9 tables. Key finding: `customer_id` is disposable (per-order) while `customer_unique_id` is the persistent real-person identifier — a distinction that affects every retention calculation in the project.
+ 
+**Phase 2 : Data quality assessment**
+Nulls, date sequence validation, outlier detection, referential integrity, and business logic checks. Key findings: 160 unapproved orders with payment records, 23 delivered-before-shipped orders (excluded from delivery analysis), 8.11% late delivery rate flagged as a core business metric.
+ 
+**Phase 3 : Exploratory data analysis**
+Monthly order trends (Black Friday 2017 spike confirmed), revenue distribution (median R$105 vs mean R$160 — right-skewed), geographic concentration, category rankings, review score distribution (backwards-J: customers speak when delighted or furious), and buying behavior (77% credit card, half the platform finances purchases).
+ 
+**Phase 4 : Business deep-dive**
+Six targeted analyses: delivery time by state (distance hypothesis confirmed), late delivery rate by month (Black Friday tripled the late rate temporarily), review score vs delivery lateness (1.72-point gap confirmed), revenue concentration (Pareto confirmed), repeat purchase rate (97% single purchase), and seller scorecard (revenue + speed + satisfaction per seller).
+ 
+**Phase 5 : Views layer**
+Five SQLite views built as the semantic layer between raw data and Power BI:
+- `vw_customer_retention`
+- `vw_delivery_by_state`
+- `vw_seller_scorecard`
+- `vw_seller_score_trend`
+- `vw_satisfaction_recovery`
+**Phase 6 : Power BI dashboard**
+Four-page dashboard connected to SQLite via ODBC. Each page answers one business question with a headline finding, supporting visuals, and a plain-English "so what" sentence.
+ 
+
+ 
+## Dataset
+ 
+[Olist Brazilian E-Commerce Dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) : Kaggle  
+9 tables, around 100,000 orders, September 2016 to October 2018.
+ 
+
+ 
+*Analysis conducted as a structured self-directed project to develop real analytical fluency , not just completing tasks, but thinking and documenting like a working analyst.*
