@@ -82,7 +82,7 @@ Five SQLite views built as the semantic layer between raw data and Power BI:
 **Phase 6 : Power BI dashboard**
 Four-page dashboard connected to SQLite via ODBC. Each page answers one business question with a headline finding, supporting visuals, and a plain-English "so what" sentence.
  
-
+**A version on excel is available** : https://docs.google.com/spreadsheets/d/1ZdfXQox0zXxsnxy0T8Hq5l8FR8neRCC0qQuvVDRTuCk/edit?usp=sharing
  
 ## Dataset
  
